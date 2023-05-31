@@ -3,7 +3,7 @@
 
 // Data source from AirTable API
 // Note: We're using NoCode API to make connecting to AirTable easier
-const url = "https://v1.nocodeapi.com/pmanikoth/airtable/rsqhQzAAKcMyyPPW?tableName=Roster";
+const url = "https://assets.codepen.io/16425/spring23web3.json";
 
 // Get data
 fetch(url)
