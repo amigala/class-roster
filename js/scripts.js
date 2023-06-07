@@ -11,25 +11,20 @@ fetch(url)
   .then( data  => {
     // check-check: get one image
     // Note: Webflow returns data in array called `items`
-    console.log(data.records);
-    console.log(data.records[0].fields);
-    console.log(data.records[0].fields.Name);
-    console.log(data.records[0].fields.Emoji);
-    console.log(data.records[0].fields.Color);
-    console.log(data.records[0].fields.Image[0].url);
+
 
     // get container for data
     const gallery = document.querySelector(".gallery");
 
     // loop through data
-    data.records.forEach( student => {
+    data.forEach( (student) => {
       
       // template
       const template = `
           <figure>
-            <figcaption>${student.fields.Name}</figcaption>
-            <p>${student.fields.Emoji}</p>
-            <img src="${student.fields.Image[0].url}" alt="${student.fields.Name}">
+            <figcaption>${student.Name}</figcaption>
+            <p>${student.Emoji}</p>
+            <img src="${student.Image}" alt="${student.Name}">
           </figure>
        `;
 
